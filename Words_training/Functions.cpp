@@ -50,12 +50,14 @@ bool e_words::Word::comparison(std::string filename)
 	};
 	if (in_word != _en_word)
 	{
+		std::cout << "Wrong !" << std::endl;
 		outfile << _en_word << std::endl << _rus_word << std::endl << std::endl;
 		return false;
 
 	}
 	else 
 	{
+		std::cout << "Good job, son! =)" << std::endl;
 		return true;
 	};
 	outfile.close();

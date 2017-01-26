@@ -1,2 +1,5 @@
-﻿  Functions.cpp
+﻿  Program.cpp
+  Functions.cpp
+  Generating Code...
+  LINK : C:\dist\Git\English-train\Debug\Words_training.exe not found or not built by the last incremental link; performing full link
   Words_training.vcxproj -> C:\dist\Git\English-train\Debug\Words_training.exe
