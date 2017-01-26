@@ -7,3 +7,12 @@ shelf
 blanket
 плед
 
+shelf
+полка
+
+dehydration
+обезвоживание
+
+shelf
+полка
+

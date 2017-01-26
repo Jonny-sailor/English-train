@@ -23,6 +23,7 @@ int main()
 	{
 		
 		std::getline(infile, en, '\n');
+		std::transform(en.begin(), en.end(), en.begin(),::tolower);
 		std::getline(infile, ru, '\n');
 		infile.ignore();
 

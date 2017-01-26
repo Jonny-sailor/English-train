@@ -33,6 +33,7 @@ e_words::Word::~Word()
 //Comparison words
 bool e_words::Word::comparison(std::string filename)
 {
+	std::cin.ignore();
 	std::ofstream outfile;
 	outfile.open(filename, std::ios::app);
 	if(!outfile.is_open())
@@ -41,13 +42,11 @@ bool e_words::Word::comparison(std::string filename)
 	};
 	std::string in_word;
 	std::cout << _rus_word << std::endl;
-	std::cin >> in_word;
+
+	std::getline(std::cin,in_word);
 
 	char *pt_in = &in_word[0];
-	if (std::isupper(*pt_in))
-	{
-		std::transform(in_word.begin(), in_word.end(), in_word.begin(), ::tolower);
-	};
+	std::transform(in_word.begin(), in_word.end(), in_word.begin(), ::tolower);
 	if (in_word != _en_word)
 	{
 		std::cout << "Wrong !" << std::endl;
@@ -61,6 +60,7 @@ bool e_words::Word::comparison(std::string filename)
 		return true;
 	};
 	outfile.close();
+	
 };
 //***********************************************************
 
