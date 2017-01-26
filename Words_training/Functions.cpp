@@ -34,7 +34,7 @@ e_words::Word::~Word()
 bool e_words::Word::comparison(std::string filename)
 {
 	std::ofstream outfile;
-	outfile.open(filename);
+	outfile.open(filename, std::ios::app);
 	if(!outfile.is_open())
 	{ 
 		exit(EXIT_FAILURE);
@@ -42,14 +42,22 @@ bool e_words::Word::comparison(std::string filename)
 	std::string in_word;
 	std::cout << _rus_word << std::endl;
 	std::cin >> in_word;
+
+	char *pt_in = &in_word[0];
+	if (std::isupper(*pt_in))
+	{
+		std::transform(in_word.begin(), in_word.end(), in_word.begin(), ::tolower);
+	};
 	if (in_word != _en_word)
 	{
 		outfile << _en_word << std::endl << _rus_word << std::endl << std::endl;
+		return false;
+
 	}
 	else 
 	{
 		return true;
-	}
+	};
 	outfile.close();
 };
 //***********************************************************

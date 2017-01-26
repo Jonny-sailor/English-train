@@ -1,17 +1,17 @@
-Blanket
+blanket
 плед
 
-Shelf
+shelf
 полка
 
-Dehydration
+dehydration
 обезвоживание
 
-Arrival
+arrival
 прибытие
 
-Bring
+bring
 принести
 
-Unfasten
+unfasten
 отстёгивать

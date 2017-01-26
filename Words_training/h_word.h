@@ -3,6 +3,8 @@
 #include <iostream>
 #include <string>
 #include <fstream>
+#include <cctype>
+#include <algorithm>
 
 namespace e_words
 {
@@ -25,6 +27,7 @@ namespace e_words
 		//destruction
 		~Word();
 	};
+
 }
 
 #endif //!H_WORD

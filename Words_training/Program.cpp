@@ -1,10 +1,12 @@
 #include "h_word.h"
 
-
+int size = 0;
 
 int main()
 {
 	setlocale(LC_ALL, "Rus");
+	std::cout << "Количество слов?" << std::endl;
+	std::cin >> size;
 	std::ifstream infile;
 	infile.open("new_words.txt");
 	if (!infile.is_open())
@@ -16,8 +18,8 @@ int main()
 	std::string tr = "empty";
 
 	//Fill array
-	e_words::Word words[20];
-	for (int i = 0; i < 20; ++i)
+	e_words::Word *pt = new e_words::Word[size];
+	for (int i = 0; i < size; ++i)
 	{
 		
 		std::getline(infile, en, '\n');
@@ -25,17 +27,17 @@ int main()
 		infile.ignore();
 
 		e_words::Word temp(en, ru, tr);
-		words[i] = temp;
+		pt[i] = temp;
 	
 	}
 	infile.close();
 
 	
-	for (int i = 0; i < 1;++i)
-	{
-		words[i].comparison("failed.txt");
-	
 
+    for (int i = 0; i < size;++i)
+	{
+		pt[i].comparison("failed.txt");
+	
 	};
 	
 

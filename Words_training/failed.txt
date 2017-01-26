@@ -1,3 +1,9 @@
-Blanket
+blanket
+плед
+
+shelf
+полка
+
+blanket
 плед
 
